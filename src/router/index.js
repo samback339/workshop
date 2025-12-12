@@ -1,0 +1,59 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Expert from '../views/Expert.vue'
+import Portfolio from '../views/Portfolio.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+    meta: {
+      title: '火星創意 | 專業網頁開發團隊'
+    }
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+    meta: {
+      title: '關於我們 | 火星創意'
+    }
+  },
+  {
+    path: '/expert',
+    name: 'Expert',
+    component: Expert,
+    meta: {
+      title: '專家介紹 | 火星創意'
+    }
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: Portfolio,
+    meta: {
+      title: '作品案例 | 火星創意'
+    }
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || '火星創意'
+  next()
+})
+
+export default router
