@@ -42,8 +42,7 @@
           </div>
 
           <!-- 計時制 -->
-          <div class="plan-card featured">
-            <div class="featured-badge">推薦</div>
+          <div class="plan-card">
             <div class="plan-header">
               <div class="plan-icon">⏱️</div>
               <h3>計時制（家教）</h3>
@@ -98,18 +97,6 @@
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="pricing-cta">
-      <div class="container">
-        <h2>準備開始合作了嗎？</h2>
-        <p>聯繫我們，讓我們討論最適合您的方案</p>
-        <div class="cta-buttons">
-          <a href="mailto:samtash1034@gmail.com" class="btn btn-primary">Email 聯繫</a>
-          <a href="https://line.me/ti/p/VX7P6B1d4p" target="_blank" class="btn btn-secondary">Line 諮詢</a>
         </div>
       </div>
     </section>
@@ -171,21 +158,7 @@ export default {
   box-shadow: var(--shadow-hover);
 }
 
-.plan-card.featured {
-  border: 3px solid var(--primary-color);
-}
 
-.featured-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: var(--gradient-2);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 0;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
 
 .plan-header {
   text-align: center;
@@ -360,42 +333,6 @@ export default {
   left: 0;
   color: var(--primary-color);
   font-weight: 700;
-}
-
-/* CTA Section */
-.pricing-cta {
-  background: var(--gradient-3);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.pricing-cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.pricing-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-secondary {
-  background: white;
-  color: var(--primary-color);
-  border: 2px solid white;
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.9);
 }
 
 /* Responsive */

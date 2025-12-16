@@ -60,15 +60,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-      <div class="container">
-        <h2>準備開始您的專案了嗎？</h2>
-        <p>立即聯繫我們，讓我們一起打造完美的數位解決方案</p>
-        <router-link to="/expert" class="btn btn-primary">立即諮詢</router-link>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -107,6 +98,36 @@ export default {
           icon: '👨‍🏫',
           title: '程式家教',
           description: '一對一程式語言教學與技術顧問服務'
+        },
+        {
+          icon: '💼',
+          title: '商業形象網站',
+          description: '專業企業官網設計，展現品牌價值與形象'
+        },
+        {
+          icon: '📄',
+          title: '一頁式網站',
+          description: '快速建立單頁式網站，適合活動頁面與產品展示'
+        },
+        {
+          icon: '🛒',
+          title: '購物車系統',
+          description: '完整電商功能開發，金流串接與訂單管理'
+        },
+        {
+          icon: '💳',
+          title: '金流串接',
+          description: '第三方金流整合，支援多種支付方式'
+        },
+        {
+          icon: '📱',
+          title: 'RWD響應式網頁',
+          description: '跨裝置完美顯示，提供最佳使用體驗'
+        },
+        {
+          icon: '🌐',
+          title: '網域設定',
+          description: '網域申請、DNS設定與SSL憑證配置'
         }
       ],
       features: [
@@ -328,25 +349,6 @@ export default {
 .feature-card p {
   color: #666;
   line-height: 1.8;
-}
-
-/* CTA Section */
-.cta {
-  background: var(--gradient-1);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.cta p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
 }
 
 /* Responsive Design */

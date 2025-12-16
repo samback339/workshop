@@ -31,15 +31,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="portfolio-cta">
-      <div class="container">
-        <h2>有專案需求嗎？</h2>
-        <p>讓我們一起打造您的下一個成功專案</p>
-        <router-link to="/expert" class="btn btn-primary">立即聯繫</router-link>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -261,25 +252,6 @@ export default {
 .project-description {
   color: #666;
   line-height: 1.8;
-}
-
-/* Portfolio CTA */
-.portfolio-cta {
-  background: var(--gradient-1);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.portfolio-cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.portfolio-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
 }
 
 /* Responsive */

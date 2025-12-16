@@ -74,15 +74,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="detail-cta">
-      <div class="container">
-        <h2>對這門課程感興趣？</h2>
-        <p>我們可以為您提供客製化的教學服務</p>
-        <router-link to="/expert" class="btn btn-primary">立即聯繫</router-link>
-      </div>
-    </section>
   </div>
 
   <div v-else class="not-found">
@@ -418,24 +409,8 @@ export default {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* CTA Section */
-.detail-cta {
-  background: var(--gradient-3);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
 
-.detail-cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
 
-.detail-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
 
 /* Not Found */
 .not-found {

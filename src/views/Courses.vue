@@ -32,15 +32,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CTA Section -->
-    <section class="courses-cta">
-      <div class="container">
-        <h2>想學習這些技術？</h2>
-        <p>我們提供客製化的教學服務</p>
-        <router-link to="/expert" class="btn btn-primary">立即聯繫</router-link>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -206,25 +197,6 @@ export default {
 .project-description {
   color: #666;
   line-height: 1.8;
-}
-
-/* Courses CTA */
-.courses-cta {
-  background: var(--gradient-3);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.courses-cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.courses-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
 }
 
 /* Responsive */

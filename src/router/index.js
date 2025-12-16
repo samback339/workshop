@@ -7,6 +7,8 @@ import ProjectDetail from '../views/ProjectDetail.vue'
 import Courses from '../views/Courses.vue'
 import CourseDetail from '../views/CourseDetail.vue'
 import Pricing from '../views/Pricing.vue'
+import Process from '../views/Process.vue'
+import AboutUs from '../views/AboutUs.vue'
 
 const routes = [
   {
@@ -71,6 +73,22 @@ const routes = [
     component: Pricing,
     meta: {
       title: '服務費用 | 火星創意'
+    }
+  },
+  {
+    path: '/process',
+    name: 'Process',
+    component: Process,
+    meta: {
+      title: '服務流程 | 火星創意'
+    }
+  },
+  {
+    path: '/about-us',
+    name: 'AboutUs',
+    component: AboutUs,
+    meta: {
+      title: '關於火星創意 | 火星創意'
     }
   }
 ]
