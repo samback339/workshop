@@ -45,7 +45,7 @@
           <div class="plan-card">
             <div class="plan-header">
               <div class="plan-icon">⏱️</div>
-              <h3>計時制（家教）</h3>
+              <h3>計時制</h3>
               <p class="plan-subtitle">適合學習指導與技術協助</p>
             </div>
             <div class="plan-price">

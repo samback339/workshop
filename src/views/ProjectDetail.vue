@@ -100,7 +100,7 @@ const projectsData = [
       '訊息歷史紀錄',
       '檔案分享功能'
     ],
-    images: ['1.svg', '2.svg']
+    images: ['1.png', '2.png', '3.png']
   },
   {
     id: 'admin-system',
@@ -132,7 +132,7 @@ const projectsData = [
       '評分與評論系統',
       '學習資源整合'
     ],
-    images: []
+    images: ['1.png', '2.png', '3.png', '4.png']
   },
   {
     id: 'deploy-platform',
@@ -163,22 +163,6 @@ const projectsData = [
       '第三方金流串接',
       '訂單管理與追蹤',
       '會員系統與優惠券'
-    ],
-    images: []
-  },
-  {
-    id: 'data-dashboard',
-    icon: '📊',
-    folder: 'data-dashboard',
-    title: '資料分析儀表板',
-    description: '視覺化資料分析平台，提供即時數據統計與報表',
-    tags: ['Python', 'Next.js', 'PostgreSQL', 'Chart.js'],
-    features: [
-      '即時數據視覺化',
-      '多維度資料分析',
-      '自定義報表生成',
-      '資料匯出功能',
-      '權限控制'
     ],
     images: []
   }
