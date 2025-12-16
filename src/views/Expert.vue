@@ -326,7 +326,7 @@ export default {
   max-width: 800px;
   margin: 0 auto;
   background: white;
-  border-radius: 20px;
+  border-radius: 0;
   padding: 50px;
   box-shadow: var(--shadow);
 }
@@ -401,7 +401,7 @@ export default {
 .service-card {
   padding: 30px;
   background: var(--light-color);
-  border-radius: 15px;
+  border-radius: 0;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -434,7 +434,7 @@ export default {
 .teaching-card {
   background: white;
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 0;
   margin-bottom: 30px;
   box-shadow: var(--shadow);
 }
@@ -455,7 +455,7 @@ export default {
   padding: 12px 25px;
   background: var(--gradient-1);
   color: white;
-  border-radius: 25px;
+  border-radius: 0;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -463,7 +463,7 @@ export default {
 .teaching-methods {
   background: white;
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 0;
   box-shadow: var(--shadow);
 }
 
@@ -483,12 +483,12 @@ export default {
   gap: 20px;
   padding: 25px;
   background: var(--light-color);
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 .method-badge {
   padding: 8px 20px;
-  border-radius: 25px;
+  border-radius: 0;
   font-weight: 700;
   font-size: 0.9rem;
   height: fit-content;
@@ -538,7 +538,7 @@ export default {
 .pricing-card {
   background: white;
   border: 3px solid var(--light-color);
-  border-radius: 20px;
+  border-radius: 0;
   padding: 40px;
   transition: all 0.3s ease;
   position: relative;
@@ -566,7 +566,7 @@ export default {
   background: var(--gradient-2);
   color: white;
   padding: 8px 20px;
-  border-radius: 25px;
+  border-radius: 0;
   font-weight: 700;
 }
 
@@ -624,7 +624,7 @@ export default {
   max-width: 900px;
   margin: 0 auto;
   background: white;
-  border-radius: 20px;
+  border-radius: 0;
   padding: 40px;
   box-shadow: var(--shadow);
 }
@@ -635,7 +635,7 @@ export default {
   padding: 25px;
   background: #fff3cd;
   border-left: 5px solid #ffc107;
-  border-radius: 10px;
+  border-radius: 0;
   margin-bottom: 20px;
 }
 
@@ -667,7 +667,7 @@ export default {
   max-width: 700px;
   margin: 0 auto;
   background: var(--light-color);
-  border-radius: 20px;
+  border-radius: 0;
   padding: 40px;
   box-shadow: var(--shadow);
 }
@@ -683,7 +683,7 @@ export default {
   align-items: center;
   padding: 20px;
   background: white;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .day-name {
@@ -713,7 +713,7 @@ export default {
 .review-card {
   background: white;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 0;
   box-shadow: var(--shadow);
 }
 
@@ -768,7 +768,7 @@ export default {
   display: inline-block;
   padding: 6px 15px;
   background: var(--light-color);
-  border-radius: 15px;
+  border-radius: 0;
   font-size: 0.9rem;
   color: #666;
 }
@@ -778,7 +778,7 @@ export default {
   padding: 20px;
   background: #e8f5e9;
   border-left: 4px solid #4caf50;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .reply-badge {
@@ -786,7 +786,7 @@ export default {
   padding: 4px 12px;
   background: #4caf50;
   color: white;
-  border-radius: 12px;
+  border-radius: 0;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 10px;
@@ -813,7 +813,7 @@ export default {
 .link-card {
   padding: 40px;
   background: var(--light-color);
-  border-radius: 20px;
+  border-radius: 0;
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: var(--shadow);

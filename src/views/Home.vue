@@ -61,58 +61,6 @@
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="section tech-stack">
-      <div class="container">
-        <h2 class="section-title">技術棧</h2>
-        <p class="section-subtitle">我們精通的技術</p>
-
-        <div class="tech-categories">
-          <div class="tech-category">
-            <h3>前端技術</h3>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">React.js</span>
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">RWD</span>
-            </div>
-          </div>
-
-          <div class="tech-category">
-            <h3>後端技術</h3>
-            <div class="tech-tags">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">Laravel</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">.NET Core</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Django</span>
-            </div>
-          </div>
-
-          <div class="tech-category">
-            <h3>其他技術</h3>
-            <div class="tech-tags">
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">AWS</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">CI/CD</span>
-              <span class="tech-tag">Nginx</span>
-              <span class="tech-tag">Git</span>
-              <span class="tech-tag">微服務</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta">
       <div class="container">
@@ -306,7 +254,7 @@ export default {
 .service-card {
   padding: 40px 30px;
   background: white;
-  border-radius: 20px;
+  border-radius: 0;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
   text-align: center;
@@ -347,7 +295,7 @@ export default {
 .feature-card {
   padding: 30px;
   background: white;
-  border-radius: 15px;
+  border-radius: 0;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
 }
@@ -380,43 +328,6 @@ export default {
 .feature-card p {
   color: #666;
   line-height: 1.8;
-}
-
-/* Tech Stack Section */
-.tech-stack {
-  background: white;
-}
-
-.tech-categories {
-  display: grid;
-  gap: 40px;
-}
-
-.tech-category h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: var(--dark-color);
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.tech-tag {
-  padding: 10px 20px;
-  background: var(--gradient-3);
-  color: white;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.tech-tag:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow);
 }
 
 /* CTA Section */

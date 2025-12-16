@@ -153,7 +153,7 @@ export default {
   transition: all 0.3s ease;
   padding: 8px 15px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 25px;
+  border-radius: 0;
   width: fit-content;
 }
 

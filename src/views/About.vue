@@ -249,7 +249,7 @@ export default {
 .intro-card {
   background: var(--light-color);
   padding: 50px;
-  border-radius: 20px;
+  border-radius: 0;
   box-shadow: var(--shadow);
 }
 
@@ -283,7 +283,7 @@ export default {
 .skill-category {
   background: white;
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 0;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
 }
@@ -347,7 +347,7 @@ export default {
   gap: 25px;
   padding: 30px;
   background: var(--light-color);
-  border-radius: 15px;
+  border-radius: 0;
   margin-bottom: 20px;
   transition: all 0.3s ease;
 }
@@ -395,7 +395,7 @@ export default {
 .project-card {
   background: white;
   padding: 35px 25px;
-  border-radius: 15px;
+  border-radius: 0;
   text-align: center;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;

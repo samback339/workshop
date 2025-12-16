@@ -14,9 +14,10 @@
 
       <ul class="nav-menu" :class="{ 'active': isMenuOpen }">
         <li><router-link to="/" @click="closeMenu">首頁</router-link></li>
-        <li><router-link to="/about" @click="closeMenu">關於我們</router-link></li>
-        <li><router-link to="/expert" @click="closeMenu">專家介紹</router-link></li>
         <li><router-link to="/portfolio" @click="closeMenu">作品案例</router-link></li>
+        <li><router-link to="/courses" @click="closeMenu">教學案例</router-link></li>
+        <li><router-link to="/pricing" @click="closeMenu">費用</router-link></li>
+        <li><a href="https://www.pro360.com.tw/service/549056" target="_blank" @click="closeMenu">Pro360專家檔案</a></li>
       </ul>
     </div>
   </nav>
