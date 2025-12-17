@@ -2,6 +2,11 @@
   <div class="about">
     <!-- Hero Section -->
     <section class="page-hero">
+      <div class="hero-bg-decoration">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+      </div>
       <div class="container">
         <h1 class="fade-in">關於我們</h1>
         <p>認識火星創意團隊</p>
@@ -188,11 +193,6 @@ export default {
           description: 'WebSocket 即時通訊、多人聊天室'
         },
         {
-          icon: '⚙️',
-          name: '後台管理系統',
-          description: '企業級後台、權限管理、資料統計'
-        },
-        {
           icon: '🎓',
           name: '學生專題報告',
           description: '協助學生完成畢業專題與技術指導'
@@ -203,9 +203,9 @@ export default {
           description: 'CI/CD 流程建置、容器化部署'
         },
         {
-          icon: '🛒',
-          name: '電商購物網站',
-          description: '購物車系統、金流串接、訂單管理'
+          icon: '📝',
+          name: '個人部落格頁面優化',
+          description: '效能優化、SEO 改善、使用者體驗提升'
         }
       ]
     }
@@ -224,6 +224,63 @@ export default {
   color: white;
   padding: 100px 20px 80px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {

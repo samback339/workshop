@@ -27,28 +27,6 @@
             <li>程式語言家教</li>
           </ul>
         </div>
-
-        <div class="footer-section">
-          <h4>聯絡方式</h4>
-          <div class="contact-info">
-            <p class="contact-item">
-              <span class="contact-icon">📧</span>
-              <a href="mailto:samtash1034@gmail.com">samtash1034@gmail.com</a>
-            </p>
-            <p class="contact-item">
-              <span class="contact-icon">📱</span>
-              <a href="tel:0917102697">0917-102-697</a>
-            </p>
-            <p class="contact-item">
-              <span class="contact-icon">💬</span>
-              <span>LINE ID: tssh_sam</span>
-            </p>
-          </div>
-          <div class="service-time">
-            <p><strong>服務時段</strong></p>
-            <p>週一至週日 09:00 - 24:00</p>
-          </div>
-        </div>
       </div>
 
       <div class="footer-bottom">

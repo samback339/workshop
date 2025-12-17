@@ -13,10 +13,6 @@
           <p class="hero-description">
             從前端到後端、從設計到部署，我們提供一站式網頁開發服務
           </p>
-          <div class="hero-buttons">
-            <router-link to="/portfolio" class="btn btn-primary">查看作品</router-link>
-            <router-link to="/expert" class="btn btn-secondary">聯繫我們</router-link>
-          </div>
         </div>
         <div class="hero-image">
           <div class="floating-icons">

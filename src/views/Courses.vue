@@ -2,6 +2,11 @@
   <div class="courses">
     <!-- Hero Section -->
     <section class="page-hero">
+      <div class="hero-bg-decoration">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+      </div>
       <div class="container">
         <h1 class="fade-in">教學案例</h1>
         <p>實戰教學經驗分享</p>
@@ -12,7 +17,6 @@
     <section class="section projects">
       <div class="container">
         <h2 class="section-title">📚 教學專案</h2>
-        <p class="section-subtitle">Spring Boot 與 Python 實戰教學</p>
 
         <div class="projects-grid">
           <div class="project-card" v-for="(course, index) in courses" :key="index" @click="goToDetail(course.id)">
@@ -24,7 +28,6 @@
               />
             </div>
             <div class="project-content">
-              <div class="course-badge">{{ course.tech }}</div>
               <h3>{{ course.title }}</h3>
               <p class="project-description">{{ course.description }}</p>
             </div>
@@ -36,63 +39,13 @@
 </template>
 
 <script>
+import { coursesData } from '@/data/courses.js'
+
 export default {
   name: 'Courses',
   data() {
     return {
-      courses: [
-        {
-          id: 'springboot-ecommerce',
-          folder: 'springboot-ecommerce',
-          tech: 'Spring Boot',
-          title: 'Spring Boot 電商系統開發',
-          description: '從零開始打造完整的電商後端系統，包含商品管理、訂單處理、會員系統等核心功能',
-          tags: ['Spring Boot', 'MySQL', 'Redis', 'JWT'],
-          features: [
-            'RESTful API 設計與實作',
-            'Spring Security 權限控管',
-            'MyBatis 資料庫操作',
-            'Redis 快取應用',
-            'JWT 身份驗證',
-            '第三方金流串接'
-          ],
-          images: []
-        },
-        {
-          id: 'springboot-microservices',
-          folder: 'springboot-microservices',
-          tech: 'Spring Boot',
-          title: 'Spring Boot 微服務架構',
-          description: '學習微服務架構設計，使用 Spring Cloud 建構分散式系統',
-          tags: ['Spring Boot', 'Spring Cloud', 'Docker', 'Kubernetes'],
-          features: [
-            '微服務架構設計',
-            'Spring Cloud Gateway 閘道器',
-            'Eureka 服務註冊與發現',
-            'Feign 服務間通訊',
-            'Docker 容器化部署',
-            'Kubernetes 容器編排'
-          ],
-          images: []
-        },
-        {
-          id: 'python-data-analysis',
-          folder: 'python-data-analysis',
-          tech: 'Python',
-          title: 'Python 數據分析與視覺化',
-          description: '使用 Python 進行數據分析、處理與視覺化，從數據中挖掘價值',
-          tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
-          features: [
-            'Pandas 數據處理',
-            'NumPy 數值運算',
-            'Matplotlib 資料視覺化',
-            'Jupyter Notebook 實作',
-            '網路爬蟲資料收集',
-            '機器學習基礎應用'
-          ],
-          images: []
-        }
-      ]
+      courses: coursesData
     }
   },
   methods: {
@@ -122,6 +75,63 @@ export default {
   color: white;
   padding: 100px 20px 80px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {
@@ -174,18 +184,6 @@ export default {
 
 .project-content {
   padding: 30px;
-  position: relative;
-}
-
-.course-badge {
-  display: inline-block;
-  padding: 6px 15px;
-  background: var(--gradient-1);
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-  border-radius: 0;
 }
 
 .project-content h3 {

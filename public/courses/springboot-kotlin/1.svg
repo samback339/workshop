@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <rect width="800" height="450" fill="url(#springGradient1)"/>
-  <text x="400" y="180" font-family="Arial, sans-serif" font-size="70" fill="white" text-anchor="middle" font-weight="700">Spring Boot</text>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="70" fill="white" text-anchor="middle" font-weight="700">Spring Boot  Kotlin</text>
   <text x="400" y="250" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="600">電商系統開發</text>
   <text x="400" y="310" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9">完整電商後端實戰教學</text>
 </svg>

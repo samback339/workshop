@@ -4,12 +4,8 @@
     <section class="detail-hero">
       <div class="container">
         <router-link to="/courses" class="back-btn">← 返回教學案例</router-link>
-        <div class="tech-badge">{{ course.tech }}</div>
         <h1 class="fade-in">{{ course.title }}</h1>
         <p>{{ course.description }}</p>
-        <div class="hero-tags">
-          <span class="tag" v-for="(tag, i) in course.tags" :key="i">{{ tag }}</span>
-        </div>
       </div>
     </section>
 
@@ -53,24 +49,13 @@
     <!-- Course Info -->
     <section class="section course-info">
       <div class="container">
-        <div class="info-grid">
-          <div class="info-card">
-            <h2 class="section-title">教學內容</h2>
-            <ul class="feature-list">
-              <li v-for="(feature, i) in course.features" :key="i">
-                {{ feature }}
-              </li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h2 class="section-title">使用技術</h2>
-            <div class="tech-tags">
-              <span class="tech-tag" v-for="(tag, i) in course.tags" :key="i">
-                {{ tag }}
-              </span>
-            </div>
-          </div>
+        <div class="info-card">
+          <h2 class="section-title">教學內容</h2>
+          <ul class="feature-list">
+            <li v-for="(feature, i) in course.features" :key="i">
+              {{ feature }}
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -85,59 +70,7 @@
 </template>
 
 <script>
-const coursesData = [
-  {
-    id: 'springboot-ecommerce',
-    folder: 'springboot-ecommerce',
-    tech: 'Spring Boot',
-    title: 'Spring Boot 電商系統開發',
-    description: '從零開始打造完整的電商後端系統，包含商品管理、訂單處理、會員系統等核心功能',
-    tags: ['Spring Boot', 'MySQL', 'Redis', 'JWT'],
-    features: [
-      'RESTful API 設計與實作',
-      'Spring Security 權限控管',
-      'MyBatis 資料庫操作',
-      'Redis 快取應用',
-      'JWT 身份驗證',
-      '第三方金流串接'
-    ],
-    images: []
-  },
-  {
-    id: 'springboot-microservices',
-    folder: 'springboot-microservices',
-    tech: 'Spring Boot',
-    title: 'Spring Boot 微服務架構',
-    description: '學習微服務架構設計，使用 Spring Cloud 建構分散式系統',
-    tags: ['Spring Boot', 'Spring Cloud', 'Docker', 'Kubernetes'],
-    features: [
-      '微服務架構設計',
-      'Spring Cloud Gateway 閘道器',
-      'Eureka 服務註冊與發現',
-      'Feign 服務間通訊',
-      'Docker 容器化部署',
-      'Kubernetes 容器編排'
-    ],
-    images: []
-  },
-  {
-    id: 'python-data-analysis',
-    folder: 'python-data-analysis',
-    tech: 'Python',
-    title: 'Python 數據分析與視覺化',
-    description: '使用 Python 進行數據分析、處理與視覺化，從數據中挖掘價值',
-    tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
-    features: [
-      'Pandas 數據處理',
-      'NumPy 數值運算',
-      'Matplotlib 資料視覺化',
-      'Jupyter Notebook 實作',
-      '網路爬蟲資料收集',
-      '機器學習基礎應用'
-    ],
-    images: []
-  }
-]
+import { coursesData } from '@/data/courses.js'
 
 export default {
   name: 'CourseDetail',
@@ -220,18 +153,6 @@ export default {
   transform: translateX(-5px);
 }
 
-.tech-badge {
-  display: inline-block;
-  padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-  border-radius: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  backdrop-filter: blur(10px);
-}
-
 .detail-hero h1 {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -240,24 +161,6 @@ export default {
 .detail-hero p {
   font-size: 1.3rem;
   opacity: 0.9;
-  margin-bottom: 25px;
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.tag {
-  padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border-radius: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  backdrop-filter: blur(10px);
 }
 
 /* Gallery Section */
@@ -346,17 +249,13 @@ export default {
   background: white;
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-}
-
 .info-card {
   background: var(--light-color);
   padding: 40px;
   border-radius: 0;
   box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .feature-list {
@@ -379,38 +278,13 @@ export default {
 }
 
 .feature-list li::before {
-  content: '✓';
+  content: '•';
   position: absolute;
   left: 0;
   color: var(--secondary-color);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.tech-tag {
-  padding: 12px 24px;
-  background: white;
-  color: var(--primary-color);
-  border-radius: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-
 
 /* Not Found */
 .not-found {
@@ -435,10 +309,6 @@ export default {
     position: static;
     display: inline-block;
     margin-bottom: 20px;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
   }
 
   .thumbnail {

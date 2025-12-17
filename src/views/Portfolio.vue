@@ -2,6 +2,11 @@
   <div class="portfolio">
     <!-- Hero Section -->
     <section class="page-hero">
+      <div class="hero-bg-decoration">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+      </div>
       <div class="container">
         <h1 class="fade-in">作品案例</h1>
         <p>我們的專案成果展示</p>
@@ -35,97 +40,17 @@
 </template>
 
 <script>
+import { projectsData } from '../data/projects'
+
 export default {
   name: 'Portfolio',
   data() {
     return {
-      projects: [
-        {
-          id: 'chat-room',
-          icon: '💬',
-          folder: 'chat-room',
-          title: '即時聊天室系統',
-          description: '基於 WebSocket 的即時通訊系統，支援多人聊天與訊息推送',
-          tags: ['WebSocket', 'Node.js', 'Vue.js', 'Redis'],
-          features: [
-            '即時訊息推送與接收',
-            '多人群組聊天室',
-            '線上用戶狀態顯示',
-            '訊息歷史紀錄',
-            '檔案分享功能'
-          ],
-          images: ['1.png'], // 可以添加圖片路徑，例如：['1.jpg', '2.jpg']
-          currentImageIndex: 0
-        },
-        {
-          id: 'admin-system',
-          icon: '⚙️',
-          folder: 'admin-system',
-          title: '企業後台管理系統',
-          description: '功能完整的企業級後台管理平台，包含權限管理與資料統計',
-          tags: ['Spring Boot', 'React', 'MySQL', 'JWT'],
-          features: [
-            '用戶權限角色管理',
-            '資料 CRUD 操作',
-            '圖表統計分析',
-            'RESTful API 設計',
-            '響應式後台介面'
-          ],
-          images: [],
-          currentImageIndex: 0
-        },
-        {
-          id: 'student-project',
-          icon: '🎓',
-          folder: 'student-project',
-          title: '學生專題系統',
-          description: '協助學生完成畢業專題，提供技術指導與實作支援',
-          tags: ['Django', 'Python', 'Bootstrap', 'SQLite'],
-          features: [
-            '專題管理系統',
-            '進度追蹤功能',
-            '文件上傳與分享',
-            '評分與評論系統',
-            '學習資源整合'
-          ],
-          images: ['1.png'],
-          currentImageIndex: 0
-        },
-        {
-          id: 'deploy-platform',
-          icon: '🚀',
-          folder: 'deploy-platform',
-          title: '自動化部署平台',
-          description: 'CI/CD 流程建置，實現自動化測試與部署',
-          tags: ['Docker', 'Jenkins', 'AWS', 'Nginx'],
-          features: [
-            'Git 整合自動部署',
-            '容器化應用部署',
-            '自動化測試流程',
-            '監控與日誌系統',
-            '回滾機制'
-          ],
-          images: ['1.jpg', '2.jpg'],
-          currentImageIndex: 0
-        },
-        {
-          id: 'ecommerce',
-          icon: '🛒',
-          folder: 'ecommerce',
-          title: '電商購物網站',
-          description: '完整的電商平台，包含購物車、金流串接與訂單管理',
-          tags: ['Laravel', 'Vue.js', 'MySQL', 'Payment API'],
-          features: [
-            '商品管理系統',
-            '購物車與結帳流程',
-            '第三方金流串接',
-            '訂單管理與追蹤',
-            '會員系統與優惠券'
-          ],
-          images: [],
-          currentImageIndex: 0
-        }
-      ]
+      // keep per-card carousel state locally so shared data stays immutable
+      projects: projectsData.map(project => ({
+        ...project,
+        currentImageIndex: 0
+      }))
     }
   },
   methods: {
@@ -172,6 +97,63 @@ export default {
   color: white;
   padding: 100px 20px 80px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  left: -50px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {

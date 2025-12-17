@@ -1,0 +1,12 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pythonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3776AB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD343;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#pythonGradient)"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="70" fill="white" text-anchor="middle" font-weight="700">Python</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle" font-weight="600">基礎</text>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9">程式語言基礎語法</text>
+</svg>
